@@ -15,19 +15,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
+        return response()->json(Category::all());
     }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -36,7 +25,7 @@ class CategoryController extends Controller
      */
     public function store(StoreCategoryRequest $request)
     {
-        //
+        return response()->json(Category::create($request->validated()));
     }
 
     /**
@@ -47,19 +36,10 @@ class CategoryController extends Controller
      */
     public function show(Category $category)
     {
-        //
+        return response()->json(Category::find($category));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Category  $category
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Category $category)
-    {
-        //
-    }
+ 
 
     /**
      * Update the specified resource in storage.
@@ -70,7 +50,20 @@ class CategoryController extends Controller
      */
     public function update(UpdateCategoryRequest $request, Category $category)
     {
-        //
+        $isUpdated = $category->update($request->validated());
+        if ($isUpdated) {
+            return response()->json([
+                "error" => false,
+                "message"  => "Category updated Successfully",
+                "data" => $category
+            ]);
+
+        }
+
+        return response()->json([
+            "error" => true,
+            "data" => null
+        ]);
     }
 
     /**
@@ -81,6 +74,19 @@ class CategoryController extends Controller
      */
     public function destroy(Category $category)
     {
-        //
+        $isDeleted = $category->delete();
+        if ($isDeleted) {
+            return response()->json([
+                "error" => false,
+                "message"  => "Category deleted Successfully",
+                "data" => null
+            ]);
+
+        }
+
+        return response()->json([
+            "error" => true,
+            "data" => null
+        ]);
     }
 }

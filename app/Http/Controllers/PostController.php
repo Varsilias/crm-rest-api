@@ -15,18 +15,9 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        return response()->json(Post::all());
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -36,7 +27,7 @@ class PostController extends Controller
      */
     public function store(StorePostRequest $request)
     {
-        //
+        return response()->json(Post::create($request->validated()));
     }
 
     /**
@@ -47,19 +38,9 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        //
+        return response()->json(Post::where("id", $post->id)->get());
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Post  $post
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Post $post)
-    {
-        //
-    }
 
     /**
      * Update the specified resource in storage.
@@ -70,7 +51,19 @@ class PostController extends Controller
      */
     public function update(UpdatePostRequest $request, Post $post)
     {
-        //
+        $isUpdated = $post->update($request->validated());
+        if ($isUpdated) {
+            return response()->json([
+                "error" => false,
+                "message"  => "Category updated Successfully",
+                "post" => $post
+            ]);
+        }
+
+        return response()->json([
+            "error" => true,
+            "data" => null
+        ]);
     }
 
     /**
@@ -81,6 +74,18 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+        $isDeleted = $post->delete();
+        if ($isDeleted) {
+            return response()->json([
+                "error" => false,
+                "message"  => "Category deleted Successfully",
+                "data" => $post
+            ]);
+        }
+
+        return response()->json([
+            "error" => true,
+            "data" => null
+        ]);
     }
 }
