@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use Illuminate\Http\Response;
+use App\Http\Resources\PostResource;
 use App\Http\Requests\StorePostRequest;
 use App\Http\Requests\UpdatePostRequest;
+use App\Http\Resources\PostCollection;
 
 class PostController extends Controller
 {
@@ -15,7 +18,13 @@ class PostController extends Controller
      */
     public function index()
     {
-        return response()->json(Post::all());
+        // return new PostCollection((Post::with('category')->paginate(10)));
+        return response()->json([
+            "error" => false,
+            "code" => Response::HTTP_OK, 
+            "status" => Response::$statusTexts[Response::HTTP_OK], 
+            "data" => (new PostCollection((Post::with('category')->paginate(10))))
+        ]);
     }
 
 
@@ -27,7 +36,12 @@ class PostController extends Controller
      */
     public function store(StorePostRequest $request)
     {
-        return response()->json(Post::create($request->validated()));
+        return response()->json([
+            "error" => false,
+            "code" => Response::HTTP_CREATED, 
+            "message" => Response::$statusTexts[Response::HTTP_CREATED], 
+            "data" => new PostResource(Post::create($request->validated()))
+        ])->setStatusCode(Response::HTTP_CREATED);
     }
 
     /**
@@ -38,7 +52,12 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        return response()->json(Post::where("id", $post->id)->get());
+        return response()->json([
+            "error" => false,
+            "code" => Response::HTTP_OK, 
+            "message" => Response::$statusTexts[Response::HTTP_OK], 
+            "data" => new PostResource(Post::findOrFail($post->id))
+        ]);
     }
 
 
@@ -51,18 +70,11 @@ class PostController extends Controller
      */
     public function update(UpdatePostRequest $request, Post $post)
     {
-        $isUpdated = $post->update($request->validated());
-        if ($isUpdated) {
-            return response()->json([
-                "error" => false,
-                "message"  => "Category updated Successfully",
-                "post" => $post
-            ]);
-        }
-
         return response()->json([
-            "error" => true,
-            "data" => null
+            "error" => false,
+            "code" => Response::HTTP_OK,
+            "message"  => "Post updated Successfully",
+            "data" => $post->update($request->validated()) ? new PostResource($post) : "Resource could not be updated"
         ]);
     }
 
@@ -74,18 +86,11 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        $isDeleted = $post->delete();
-        if ($isDeleted) {
-            return response()->json([
-                "error" => false,
-                "message"  => "Category deleted Successfully",
-                "data" => $post
-            ]);
-        }
-
         return response()->json([
-            "error" => true,
-            "data" => null
+            "error" => false,
+            "code" => Response::HTTP_OK,
+            "message"  => "Post deleted Successfully",
+            "data" => $post->delete() ? null : "Resource could not be deleted"
         ]);
     }
 }
