@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Http\Requests\StoreCategoryRequest;
 use App\Http\Requests\UpdateCategoryRequest;
+use App\Http\Resources\CategoryResource;
+use Illuminate\Http\Response;
+use Symfony\Component\Console\Output\ConsoleOutput;
+use Database\Factories\CategoryFactory;
 
 class CategoryController extends Controller
 {
@@ -15,7 +19,13 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        return response()->json(Category::all());
+
+        return response()->json([
+            "error" => false,
+            "code" => Response::HTTP_OK, 
+            "status" => Response::$statusTexts[Response::HTTP_OK], 
+            "data" => CategoryResource::collection(Category::all())
+        ]);
     }
     /**
      * Store a newly created resource in storage.
@@ -25,7 +35,12 @@ class CategoryController extends Controller
      */
     public function store(StoreCategoryRequest $request)
     {
-        return response()->json(Category::create($request->validated()));
+        return response()->json([
+            "error" => false,
+            "code" => Response::HTTP_CREATED, 
+            "message" => Response::$statusTexts[Response::HTTP_CREATED], 
+            "data" => new CategoryResource(Category::create($request->validated()))
+        ])->setStatusCode(Response::HTTP_CREATED);
     }
 
     /**
@@ -36,7 +51,12 @@ class CategoryController extends Controller
      */
     public function show(Category $category)
     {
-        return response()->json(Category::find($category));
+        return response()->json([
+            "error" => false,
+            "code" => Response::HTTP_OK, 
+            "message" => Response::$statusTexts[Response::HTTP_OK], 
+            "data" => new CategoryResource(Category::findOrFail($category->id))
+        ]);
     }
 
  
@@ -50,20 +70,16 @@ class CategoryController extends Controller
      */
     public function update(UpdateCategoryRequest $request, Category $category)
     {
-        $isUpdated = $category->update($request->validated());
-        if ($isUpdated) {
-            return response()->json([
-                "error" => false,
-                "message"  => "Category updated Successfully",
-                "data" => $category
-            ]);
-
-        }
-
+        
         return response()->json([
-            "error" => true,
-            "data" => null
+            "error" => false,
+            "code" => Response::HTTP_OK,
+            "message"  => "Category updated Successfully",
+            "data" => $category->update($request->validated()) ? new CategoryResource($category) : "Resource could not be updated"
         ]);
+
+
+    
     }
 
     /**
@@ -74,19 +90,11 @@ class CategoryController extends Controller
      */
     public function destroy(Category $category)
     {
-        $isDeleted = $category->delete();
-        if ($isDeleted) {
-            return response()->json([
-                "error" => false,
-                "message"  => "Category deleted Successfully",
-                "data" => null
-            ]);
-
-        }
-
         return response()->json([
-            "error" => true,
-            "data" => null
+            "error" => false,
+            "code" => Response::HTTP_OK,
+            "message"  => "Category deleted Successfully",
+            "data" => $category->delete() ? null : "Resource could not be deleted"
         ]);
     }
 }
