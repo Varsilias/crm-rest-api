@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ForgotPasswordController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,11 +26,16 @@ Route::group([
     "prefix" => "v1"
 ], function () {
     Route::group(["prefix" => "users"], function() {
+        Route::get('/', [AuthController::class, "getAllUsers"]);
         Route::post('/sign-up', [AuthController::class, "signUp"]);
         Route::post('/login', [AuthController::class, "login"]);
-        Route::get('/profile', [AuthController::class, "profile"])->middleware(['jwt.verify']);
         Route::post('/token/refresh', [AuthController::class, "refresh"])->middleware(['refresh']);
+        Route::get('/profile', [AuthController::class, "profile"])->middleware(['jwt.verify']);
         Route::post('/logout', [AuthController::class, "logout"])->middleware(['jwt.verify']);
+
+        Route::post('/forgot-password', [ForgotPasswordController::class, "forgotPassword"]);
+        Route::post('/reset-password', [ForgotPasswordController::class, "resetPassword"]);
+
 
     });
     Route::apiResource('categories', CategoryController::class);

@@ -16,6 +16,19 @@ use Illuminate\Support\Facades\Config;
 
 class AuthController extends Controller
 {
+
+    public function getAllUsers()
+    {
+        $users = User::all();
+
+        return response()->json([
+            "error" => true,
+            "code" => Response::HTTP_OK, 
+            "status" => Response::$statusTexts[Response::HTTP_OK],
+            'data' => UserResource::collection($users),
+        ], Response::HTTP_OK);
+    }
+
     public function signUp(UserSignUpRequest $request)
     {
         $validated = $request->safe()->only(['name', 'email', "password"]);
@@ -30,8 +43,8 @@ class AuthController extends Controller
 
         return response()->json([
             "error" => false,
-            "code" => Response::HTTP_BAD_REQUEST, 
-            "status" => Response::$statusTexts[Response::HTTP_BAD_REQUEST],
+            "code" => Response::HTTP_OK, 
+            "status" => Response::$statusTexts[Response::HTTP_OK],
             'message' => 'SignUp successfully',
             'data' => new UserResource($user),
         ], Response::HTTP_OK);
@@ -127,4 +140,5 @@ class AuthController extends Controller
             "message" => "Logged out successfully"
         ]);
     }
+    
 }
