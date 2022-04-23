@@ -27,4 +27,11 @@ class ForgotPasswordRequest extends FormRequest
             'email' => 'required|email|exists:users',
         ];
     }
+
+    function offsetExists($offset) {
+        return true;
+    }
+    function offsetGet($offset) {}
+    function offsetSet($offset, $value) {}
+    function offsetUnset($offset) {}
 }

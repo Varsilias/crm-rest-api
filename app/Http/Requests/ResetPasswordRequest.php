@@ -30,4 +30,11 @@ class ResetPasswordRequest extends FormRequest
             'password_confirmation' => 'required'
         ];
     }
+
+    function offsetExists($offset) {
+        return true;
+    }
+    function offsetGet($offset) {}
+    function offsetSet($offset, $value) {}
+    function offsetUnset($offset) {}
 }

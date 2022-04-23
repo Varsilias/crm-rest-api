@@ -27,4 +27,11 @@ class UpdateCategoryRequest extends FormRequest
             "name" => "required|min:3|string"
         ];
     }
+
+    function offsetExists($offset) {
+        return true;
+    }
+    function offsetGet($offset) {}
+    function offsetSet($offset, $value) {}
+    function offsetUnset($offset) {}
 }

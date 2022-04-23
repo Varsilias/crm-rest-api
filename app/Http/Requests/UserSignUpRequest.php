@@ -30,4 +30,10 @@ class UserSignUpRequest extends FormRequest
         ];
     }
 
+    function offsetExists($offset) {
+        return true;
+    }
+    function offsetGet($offset) {}
+    function offsetSet($offset, $value) {}
+    function offsetUnset($offset) {}
 }

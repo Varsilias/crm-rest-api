@@ -28,4 +28,11 @@ class LoginRequest extends FormRequest
             'password' => 'required|string|min:6|max:50'
         ];
     }
+
+    function offsetExists($offset) {
+        return true;
+    }
+    function offsetGet($offset) {}
+    function offsetSet($offset, $value) {}
+    function offsetUnset($offset) {}
 }

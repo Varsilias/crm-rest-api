@@ -30,4 +30,11 @@ class StorePostRequest extends FormRequest
             "author" => "required|string"
         ];
     }
+
+    function offsetExists($offset) {
+        return true;
+    }
+    function offsetGet($offset) {}
+    function offsetSet($offset, $value) {}
+    function offsetUnset($offset) {}
 }
