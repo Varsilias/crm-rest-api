@@ -17,6 +17,7 @@
 
 ### Start Application
 - Run `php artisan serve` to start the application development server
+- Run `php artisan route:list` to list all the available route that exists in the application
 - Sip some coffee while going through the code, you will enjoy it :sweat_smile:
 
 ### Extra

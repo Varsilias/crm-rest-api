@@ -1,0 +1,1864 @@
+{
+	"info": {
+		"_postman_id": "a468a8f9-7ed9-4a9b-b6bf-d33e0114dc9b",
+		"name": "CRM_REST_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Categories",
+			"item": [
+				{
+					"name": "Get All Categories",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/categories",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Categories Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/categories",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"categories"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Apr 2022 21:59:02 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Apr 2022 21:59:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.5"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"code\": 200,\n    \"status\": \"OK\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"perspiciatis\",\n            \"createdAt\": \"2022-04-23T02:56:19.000000Z\",\n            \"updatedAt\": \"2022-04-23T02:56:19.000000Z\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"sequi\",\n            \"createdAt\": \"2022-04-23T02:56:19.000000Z\",\n            \"updatedAt\": \"2022-04-23T02:56:19.000000Z\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"quibusdam\",\n            \"createdAt\": \"2022-04-23T02:56:19.000000Z\",\n            \"updatedAt\": \"2022-04-23T02:56:19.000000Z\"\n        },\n        {\n            \"id\": 4,\n            \"name\": \"cumque\",\n            \"createdAt\": \"2022-04-23T02:56:20.000000Z\",\n            \"updatedAt\": \"2022-04-23T02:56:20.000000Z\"\n        },\n        {\n            \"id\": 5,\n            \"name\": \"ipsum\",\n            \"createdAt\": \"2022-04-23T02:56:20.000000Z\",\n            \"updatedAt\": \"2022-04-23T02:56:20.000000Z\"\n        },\n        {\n            \"id\": 6,\n            \"name\": \"rerum\",\n            \"createdAt\": \"2022-04-23T02:56:20.000000Z\",\n            \"updatedAt\": \"2022-04-23T02:56:20.000000Z\"\n        },\n        {\n            \"id\": 7,\n            \"name\": \"quidem\",\n            \"createdAt\": \"2022-04-23T02:56:20.000000Z\",\n            \"updatedAt\": \"2022-04-23T02:56:20.000000Z\"\n        },\n        {\n            \"id\": 8,\n            \"name\": \"officia\",\n            \"createdAt\": \"2022-04-23T02:56:20.000000Z\",\n            \"updatedAt\": \"2022-04-23T02:56:20.000000Z\"\n        },\n        {\n            \"id\": 9,\n            \"name\": \"aliquid\",\n            \"createdAt\": \"2022-04-23T02:56:20.000000Z\",\n            \"updatedAt\": \"2022-04-23T02:56:20.000000Z\"\n        },\n        {\n            \"id\": 10,\n            \"name\": \"in\",\n            \"createdAt\": \"2022-04-23T02:56:20.000000Z\",\n            \"updatedAt\": \"2022-04-23T02:56:20.000000Z\"\n        },\n        {\n            \"id\": 11,\n            \"name\": \"Sally\",\n            \"createdAt\": \"2022-04-23T21:48:17.000000Z\",\n            \"updatedAt\": \"2022-04-23T21:48:17.000000Z\"\n        },\n        {\n            \"id\": 12,\n            \"name\": \"Sally\",\n            \"createdAt\": \"2022-04-23T21:48:45.000000Z\",\n            \"updatedAt\": \"2022-04-23T21:48:45.000000Z\"\n        },\n        {\n            \"id\": 13,\n            \"name\": \"Sally\",\n            \"createdAt\": \"2022-04-23T21:49:20.000000Z\",\n            \"updatedAt\": \"2022-04-23T21:49:20.000000Z\"\n        },\n        {\n            \"id\": 14,\n            \"name\": \"Sally\",\n            \"createdAt\": \"2022-04-23T21:49:57.000000Z\",\n            \"updatedAt\": \"2022-04-23T21:49:57.000000Z\"\n        },\n        {\n            \"id\": 15,\n            \"name\": \"Sally\",\n            \"createdAt\": \"2022-04-23T21:50:14.000000Z\",\n            \"updatedAt\": \"2022-04-23T21:50:14.000000Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get a Category by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/categories/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"categories",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Response - Get a Category by ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/categories/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"categories",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Apr 2022 21:59:41 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Apr 2022 21:59:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.5"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"code\": 200,\n    \"message\": \"OK\",\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"perspiciatis\",\n        \"createdAt\": \"2022-04-23T02:56:19.000000Z\",\n        \"updatedAt\": \"2022-04-23T02:56:19.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create a New Category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Web Development\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/categories",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Response - Create a New Category",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Web Development\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/categories",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"categories"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Apr 2022 22:00:16 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Apr 2022 22:00:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.5"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"code\": 201,\n    \"message\": \"Created\",\n    \"data\": {\n        \"id\": 16,\n        \"name\": \"Web Development\",\n        \"createdAt\": \"2022-04-23T22:00:16.000000Z\",\n        \"updatedAt\": \"2022-04-23T22:00:16.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update A Category",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Web\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/categories/16",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"categories",
+								"16"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Response - Update A Category",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Web\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/categories/16",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"categories",
+										"16"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Apr 2022 22:01:02 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Apr 2022 22:01:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.5"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"code\": 200,\n    \"message\": \"Category updated Successfully\",\n    \"data\": {\n        \"id\": 16,\n        \"name\": \"Web\",\n        \"createdAt\": \"2022-04-23T22:00:16.000000Z\",\n        \"updatedAt\": \"2022-04-23T22:01:02.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete a Category",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/categories/16",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"categories",
+								"16"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Response - Delete a Category",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/categories/16",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"categories",
+										"16"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Apr 2022 22:01:30 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Apr 2022 22:01:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.5"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"code\": 200,\n    \"message\": \"Category deleted Successfully\",\n    \"data\": null\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Posts",
+			"item": [
+				{
+					"name": "Get all Posts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{DoctorToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/posts",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get all Posts",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/posts",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"posts"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Apr 2022 22:29:11 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Apr 2022 22:29:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.5"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"code\": 200,\n    \"status\": \"OK\",\n    \"data\": {\n        \"posts\": [\n            {\n                \"id\": 6,\n                \"user_id\": 10,\n                \"title\": \"This is an updated test Title\",\n                \"body\": \"This is an updated test body\",\n                \"author\": \"Daniel Okoronkwo\",\n                \"created_at\": \"2022-04-23T02:56:20.000000Z\",\n                \"updated_at\": \"2022-04-23T20:23:11.000000Z\",\n                \"category\": \"quidem\"\n            },\n            {\n                \"id\": 12,\n                \"user_id\": 10,\n                \"title\": \"Dolor quisquam voluptatem et quae.\",\n                \"body\": \"Numquam voluptate voluptatem aliquid veritatis sunt eos. Dolorem porro et quo aliquam eum ea. Quas veniam aliquam atque assumenda debitis voluptatem. Pariatur quis et sed dolores rem tempora sed. Sunt neque dolore itaque soluta fuga.\",\n                \"author\": \"Elliot Kutch\",\n                \"created_at\": \"2022-04-23T02:56:20.000000Z\",\n                \"updated_at\": \"2022-04-23T02:56:20.000000Z\",\n                \"category\": \"quibusdam\"\n            },\n            {\n                \"id\": 17,\n                \"user_id\": 10,\n                \"title\": \"A accusantium quam officiis est debitis sequi.\",\n                \"body\": \"Recusandae doloribus accusantium odit omnis consectetur et. Enim officiis illo dolor quia quae.\",\n                \"author\": \"Reyna Reichel\",\n                \"created_at\": \"2022-04-23T02:56:20.000000Z\",\n                \"updated_at\": \"2022-04-23T02:56:20.000000Z\",\n                \"category\": \"aliquid\"\n            },\n            {\n                \"id\": 18,\n                \"user_id\": 10,\n                \"title\": \"Porro impedit illum doloremque.\",\n                \"body\": \"Quo ut ipsam perferendis voluptatibus provident. Repellat non omnis autem recusandae dolore sequi autem qui. Assumenda dolore necessitatibus et aliquam. Ipsum tempora magnam vitae necessitatibus.\",\n                \"author\": \"Delphia Nicolas\",\n                \"created_at\": \"2022-04-23T02:56:20.000000Z\",\n                \"updated_at\": \"2022-04-23T02:56:20.000000Z\",\n                \"category\": \"sequi\"\n            },\n            {\n                \"id\": 36,\n                \"user_id\": 10,\n                \"title\": \"Temporibus sunt quia repellendus quibusdam odit id corrupti.\",\n                \"body\": \"Sit molestiae omnis ratione ipsa perspiciatis. Sapiente qui dolor praesentium voluptatem nam quasi. Alias quia est non. Perspiciatis corporis eum maxime corrupti sit. Qui eius non qui quia sed minima quas.\",\n                \"author\": \"Prof. Lavern Lind I\",\n                \"created_at\": \"2022-04-23T02:56:20.000000Z\",\n                \"updated_at\": \"2022-04-23T02:56:20.000000Z\",\n                \"category\": \"aliquid\"\n            },\n            {\n                \"id\": 38,\n                \"user_id\": 10,\n                \"title\": \"Aut fugiat expedita occaecati error quis impedit aspernatur magnam.\",\n                \"body\": \"Recusandae hic officiis dolor et quisquam. Est enim velit voluptatibus enim. Sint enim asperiores corporis. Odit iure quidem error at culpa ut rerum accusamus.\",\n                \"author\": \"Ms. Jada Bailey DVM\",\n                \"created_at\": \"2022-04-23T02:56:20.000000Z\",\n                \"updated_at\": \"2022-04-23T02:56:20.000000Z\",\n                \"category\": \"sequi\"\n            },\n            {\n                \"id\": 44,\n                \"user_id\": 10,\n                \"title\": \"Similique quo dolore tempora molestias amet ratione magni in.\",\n                \"body\": \"Molestiae culpa ea dolor deserunt. Sapiente aliquid voluptatem consequatur delectus officia veritatis aspernatur. Provident hic velit expedita nemo. Cumque aut nesciunt nulla odit.\",\n                \"author\": \"Mr. Myron Hauck V\",\n                \"created_at\": \"2022-04-23T02:56:20.000000Z\",\n                \"updated_at\": \"2022-04-23T02:56:20.000000Z\",\n                \"category\": \"aliquid\"\n            },\n            {\n                \"id\": 48,\n                \"user_id\": 10,\n                \"title\": \"Nisi vitae modi illum culpa modi itaque et.\",\n                \"body\": \"Ad maiores et et id. Voluptas non ut et. Provident alias alias et sint. Nemo dolorum iste eveniet ut aspernatur.\",\n                \"author\": \"Dr. Mafalda Gutmann\",\n                \"created_at\": \"2022-04-23T02:56:21.000000Z\",\n                \"updated_at\": \"2022-04-23T02:56:21.000000Z\",\n                \"category\": \"aliquid\"\n            }\n        ],\n        \"metadata\": {\n            \"current_page\": 1,\n            \"from\": 1,\n            \"to\": 1,\n            \"current_url\": \"http://localhost:8000/api/v1/posts\",\n            \"base_url\": \"http://localhost:8000/api/v1/posts\",\n            \"per_page\": 10,\n            \"total\": 8\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get a Post by ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{DoctorToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/posts/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"posts",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get a Post by ID - Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/posts/12",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"posts",
+										"12"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Apr 2022 22:29:31 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Apr 2022 22:29:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.5"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"code\": 200,\n    \"message\": \"OK\",\n    \"data\": {\n        \"id\": 12,\n        \"user_id\": 10,\n        \"title\": \"Dolor quisquam voluptatem et quae.\",\n        \"body\": \"Numquam voluptate voluptatem aliquid veritatis sunt eos. Dolorem porro et quo aliquam eum ea. Quas veniam aliquam atque assumenda debitis voluptatem. Pariatur quis et sed dolores rem tempora sed. Sunt neque dolore itaque soluta fuga.\",\n        \"author\": \"Elliot Kutch\",\n        \"created_at\": \"2022-04-23T02:56:20.000000Z\",\n        \"updated_at\": \"2022-04-23T02:56:20.000000Z\",\n        \"category\": \"quibusdam\"\n    }\n}"
+						},
+						{
+							"name": "Get a Post by ID - Failure",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/posts/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"posts",
+										"1"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Apr 2022 22:29:56 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Apr 2022 22:29:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.5"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": true,\n    \"code\": 404,\n    \"status\": \"Not Found\",\n    \"message\": \"No Post with this ID\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create a Post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{DoctorToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"category_id\": 4,\r\n    \"title\": \"This is test Title\",\r\n    \"body\": \"This is a test body\",\r\n    \"author\": \"Daniel Okoronkwo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/posts",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create a Post",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"category_id\": 4,\r\n    \"title\": \"This is test Title\",\r\n    \"body\": \"This is a test body\",\r\n    \"author\": \"Daniel Okoronkwo\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/posts",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"posts"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Apr 2022 22:30:26 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Apr 2022 22:30:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.5"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"code\": 201,\n    \"message\": \"Created\",\n    \"data\": {\n        \"id\": 52,\n        \"user_id\": 10,\n        \"title\": \"This is test Title\",\n        \"body\": \"This is a test body\",\n        \"author\": \"Daniel Okoronkwo\",\n        \"created_at\": \"2022-04-23T22:30:26.000000Z\",\n        \"updated_at\": \"2022-04-23T22:30:26.000000Z\",\n        \"category\": \"cumque\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Updated a Post By ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{DoctorToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"category_id\": 7,\r\n    \"title\": \"This is an updated test Title\",\r\n    \"body\": \"This is an updated test body\",\r\n    \"author\": \"Daniel Okoronkwo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/posts/52",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"posts",
+								"52"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Updated a Post By ID",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"category_id\": 7,\r\n    \"title\": \"This is an updated test Title\",\r\n    \"body\": \"This is an updated test body\",\r\n    \"author\": \"Daniel Okoronkwo\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/posts/52",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"posts",
+										"52"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Apr 2022 22:30:59 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Apr 2022 22:30:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.5"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"code\": 200,\n    \"message\": \"Post updated Successfully\",\n    \"data\": {\n        \"id\": 52,\n        \"user_id\": 10,\n        \"title\": \"This is an updated test Title\",\n        \"body\": \"This is an updated test body\",\n        \"author\": \"Daniel Okoronkwo\",\n        \"created_at\": \"2022-04-23T22:30:26.000000Z\",\n        \"updated_at\": \"2022-04-23T22:30:59.000000Z\",\n        \"category\": \"quidem\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete a Post By ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{DoctorToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/posts/52",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"posts",
+								"52"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete a Post By ID",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/posts/52",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"posts",
+										"52"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Apr 2022 22:31:29 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Apr 2022 22:31:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.5"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"code\": 200,\n    \"message\": \"Post deleted Successfully\",\n    \"data\": null\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "SIgn Up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Daniel Okoronkwo\",\r\n    \"email\": \"daniel1@gmail.com\",\r\n    \"password\": \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/users/sign-up",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users",
+								"sign-up"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "SIgn Up - Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Daniel Okoronkwo\",\r\n    \"email\": \"daniel1@gmail.com\",\r\n    \"password\": \"password\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/users/sign-up",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"users",
+										"sign-up"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Apr 2022 22:03:23 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Apr 2022 22:03:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.5"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"code\": 200,\n    \"status\": \"OK\",\n    \"message\": \"SignUp successfully\",\n    \"data\": {\n        \"uuid\": \"298268dc-65cf-4498-885e-28c9282b1f85\",\n        \"name\": \"Daniel Okoronkwo\",\n        \"email\": \"daniel1@gmail.com\",\n        \"email_verified_at\": null,\n        \"updated_at\": \"2022-04-23T22:03:23.000000Z\",\n        \"created_at\": \"2022-04-23T22:03:23.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC92MVwvdXNlcnNcL2xvZ2luIiwiaWF0IjoxNjUwNzEzODQ5LCJleHAiOjE2NTA4MDAyNDksIm5iZiI6MTY1MDcxMzg0OSwianRpIjoiaGljZ0ppTklNQXUzODVhUCIsInN1YiI6MTEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjciLCJ1dWlkIjoiMDE5MDI0YTMtNDkxYS00ZGQ0LTk3MzItOWQ2YzUxZDllMWExIn0.MzSQVEaK1MosAd_L7nmBh_onhwphoDX9a6p5cxqap44",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"madie39@example.org\",\r\n    \"password\": \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/users/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login - Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC92MVwvdXNlcnNcL2xvZ2luIiwiaWF0IjoxNjUwNzEzODQ5LCJleHAiOjE2NTA4MDAyNDksIm5iZiI6MTY1MDcxMzg0OSwianRpIjoiaGljZ0ppTklNQXUzODVhUCIsInN1YiI6MTEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjciLCJ1dWlkIjoiMDE5MDI0YTMtNDkxYS00ZGQ0LTk3MzItOWQ2YzUxZDllMWExIn0.MzSQVEaK1MosAd_L7nmBh_onhwphoDX9a6p5cxqap44",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"daniel1@gmail.com\",\r\n    \"password\": \"password\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/users/login",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"users",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Apr 2022 22:04:05 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Apr 2022 22:04:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.5"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"code\": 200,\n    \"status\": \"OK\",\n    \"access_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMCIsImlhdCI6MTY1MDc1MTQ0NSwiZXhwIjoxNjUwNzU1MDQ1LCJuYmYiOjE2NTA3NTE0NDUsImp0aSI6IkxPY2VBZXZIU1k3ZlN1OGoiLCJzdWIiOjE1LCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3IiwidXVpZCI6IjI5ODI2OGRjLTY1Y2YtNDQ5OC04ODVlLTI4YzkyODJiMWY4NSJ9.OD965xK3F0ZnRx_fqKJwznJW4e8Vjh3HgpzbOIPuYVI\",\n    \"expires_in\": 3600,\n    \"refresh_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMCIsImlhdCI6MTY1MDc1MTQ0NSwiZXhwIjoxNjUwODM3ODQ0LCJuYmYiOjE2NTA3NTE0NDUsImp0aSI6ImpGNGg3QXh6cGxmSWdVVGMiLCJzdWIiOjE1LCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3IiwidXVpZCI6IjI5ODI2OGRjLTY1Y2YtNDQ5OC04ODVlLTI4YzkyODJiMWY4NSJ9.OVLNdsY_ZjfFkKH2dy29hxy4NizxziFremAKFexrDI4\",\n    \"refresh_expiry\": 86400\n}"
+						}
+					]
+				},
+				{
+					"name": "Refresh Token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"refresh_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMCIsImlhdCI6MTY1MDc1MTQ0NSwiZXhwIjoxNjUwODM3ODQ0LCJuYmYiOjE2NTA3NTE0NDUsImp0aSI6ImpGNGg3QXh6cGxmSWdVVGMiLCJzdWIiOjE1LCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3IiwidXVpZCI6IjI5ODI2OGRjLTY1Y2YtNDQ5OC04ODVlLTI4YzkyODJiMWY4NSJ9.OVLNdsY_ZjfFkKH2dy29hxy4NizxziFremAKFexrDI4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/users/token/refresh",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users",
+								"token",
+								"refresh"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Refresh Token - Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"refresh_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMCIsImlhdCI6MTY1MDc1MTQ0NSwiZXhwIjoxNjUwODM3ODQ0LCJuYmYiOjE2NTA3NTE0NDUsImp0aSI6ImpGNGg3QXh6cGxmSWdVVGMiLCJzdWIiOjE1LCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3IiwidXVpZCI6IjI5ODI2OGRjLTY1Y2YtNDQ5OC04ODVlLTI4YzkyODJiMWY4NSJ9.OVLNdsY_ZjfFkKH2dy29hxy4NizxziFremAKFexrDI4\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/users/token/refresh",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"users",
+										"token",
+										"refresh"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Apr 2022 22:26:46 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Apr 2022 22:26:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.5"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"code\": 200,\n    \"status\": \"OK\",\n    \"access_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMCIsImlhdCI6MTY1MDc1MjgwNiwiZXhwIjoxNjUwNzU2NDA2LCJuYmYiOjE2NTA3NTI4MDYsImp0aSI6Ik9lWkhNNDA5VXdubjZXT0ciLCJzdWIiOjE1LCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3IiwidXVpZCI6IjI5ODI2OGRjLTY1Y2YtNDQ5OC04ODVlLTI4YzkyODJiMWY4NSJ9.24lWtFG3yvlPmycM74nR1U3IUO96-UCDplQ8viCEEpg\",\n    \"expires_in\": 3600,\n    \"refresh_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMCIsImlhdCI6MTY1MDc1MjgwNiwiZXhwIjoxNjUwODM5MjA2LCJuYmYiOjE2NTA3NTI4MDYsImp0aSI6ImlMZk1vUkpLWDd6RGJ5OXIiLCJzdWIiOjE1LCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3IiwidXVpZCI6IjI5ODI2OGRjLTY1Y2YtNDQ5OC04ODVlLTI4YzkyODJiMWY4NSJ9.BnGpfzh76D7_RGehqs8ddqdkc6saYA5NALrWvYbH1I8\",\n    \"refresh_expiry\": 86400\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{DoctorToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMCIsImlhdCI6MTY1MDc0MjI5MiwiZXhwIjoxNjUwNzQ1ODkyLCJuYmYiOjE2NTA3NDIyOTIsImp0aSI6Ilo0VnZXS294WTA2MGNzcGkiLCJzdWIiOjEwLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3IiwidXVpZCI6IjIzNThlZjllLTMyNzEtMzljNy1hMzE2LWJhYWQ0NjM2NjAxZCJ9.FKI33FrSmBpvZjMKKD9RDtupDu8v_U_GaO-bnbtfd5Q",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/users/profile",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users",
+								"profile"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Profile - Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMCIsImlhdCI6MTY1MDc0MjI5MiwiZXhwIjoxNjUwNzQ1ODkyLCJuYmYiOjE2NTA3NDIyOTIsImp0aSI6Ilo0VnZXS294WTA2MGNzcGkiLCJzdWIiOjEwLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3IiwidXVpZCI6IjIzNThlZjllLTMyNzEtMzljNy1hMzE2LWJhYWQ0NjM2NjAxZCJ9.FKI33FrSmBpvZjMKKD9RDtupDu8v_U_GaO-bnbtfd5Q",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/users/profile",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"users",
+										"profile"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Apr 2022 22:23:17 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Apr 2022 22:23:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.5"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"code\": 200,\n    \"status\": \"OK\",\n    \"user\": {\n        \"uuid\": \"298268dc-65cf-4498-885e-28c9282b1f85\",\n        \"name\": \"Daniel Okoronkwo\",\n        \"email\": \"daniel1@gmail.com\",\n        \"email_verified_at\": null,\n        \"updated_at\": \"2022-04-23T22:03:23.000000Z\",\n        \"created_at\": \"2022-04-23T22:03:23.000000Z\",\n        \"posts\": []\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{DoctorToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMCIsImlhdCI6MTY1MDc0MTcxNCwiZXhwIjoxNjUwNzQ1MzE0LCJuYmYiOjE2NTA3NDE3MTQsImp0aSI6Im5mUDBjUUFLcWt5ZjN6SlIiLCJzdWIiOjExLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3IiwidXVpZCI6IjAxOTAyNGEzLTQ5MWEtNGRkNC05NzMyLTlkNmM1MWQ5ZTFhMSJ9.WY2jlc_ysMhlvpMAkLN91Krf6n2ZiG2YRe8JeMh79yc",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/users/logout",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users",
+								"logout"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Logout - Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMCIsImlhdCI6MTY1MDc0MTcxNCwiZXhwIjoxNjUwNzQ1MzE0LCJuYmYiOjE2NTA3NDE3MTQsImp0aSI6Im5mUDBjUUFLcWt5ZjN6SlIiLCJzdWIiOjExLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3IiwidXVpZCI6IjAxOTAyNGEzLTQ5MWEtNGRkNC05NzMyLTlkNmM1MWQ5ZTFhMSJ9.WY2jlc_ysMhlvpMAkLN91Krf6n2ZiG2YRe8JeMh79yc",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/users/logout",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"users",
+										"logout"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Apr 2022 22:27:54 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Apr 2022 22:27:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.5"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"status\": \"OK\",\n    \"message\": \"Logged out successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Fetch All Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/users",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Fetch All Users - Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/users",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Apr 2022 22:24:07 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Apr 2022 22:24:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.5"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": true,\n    \"code\": 200,\n    \"status\": \"OK\",\n    \"data\": [\n        {\n            \"uuid\": \"556ce18d-b9aa-3271-a2b8-6570cc1b28bd\",\n            \"name\": \"Dr. Zoe Johnston I\",\n            \"email\": \"ucronin@example.org\",\n            \"email_verified_at\": \"2022-04-23T02:56:19.000000Z\",\n            \"updated_at\": \"2022-04-23T02:56:19.000000Z\",\n            \"created_at\": \"2022-04-23T02:56:19.000000Z\"\n        },\n        {\n            \"uuid\": \"eb595f5d-ac3d-354f-9c83-3a75009f7fbc\",\n            \"name\": \"Weldon Doyle\",\n            \"email\": \"remington44@example.com\",\n            \"email_verified_at\": \"2022-04-23T02:56:19.000000Z\",\n            \"updated_at\": \"2022-04-23T02:56:19.000000Z\",\n            \"created_at\": \"2022-04-23T02:56:19.000000Z\"\n        },\n        {\n            \"uuid\": \"d0dab3b0-ddfe-3e65-a3e3-daa2c55d5180\",\n            \"name\": \"Adolph Zulauf Sr.\",\n            \"email\": \"ssenger@example.com\",\n            \"email_verified_at\": \"2022-04-23T02:56:19.000000Z\",\n            \"updated_at\": \"2022-04-23T02:56:19.000000Z\",\n            \"created_at\": \"2022-04-23T02:56:19.000000Z\"\n        },\n        {\n            \"uuid\": \"3b0311e5-cee0-335d-925d-2bd84a501648\",\n            \"name\": \"Billie Brekke\",\n            \"email\": \"wstrosin@example.org\",\n            \"email_verified_at\": \"2022-04-23T02:56:19.000000Z\",\n            \"updated_at\": \"2022-04-23T02:56:19.000000Z\",\n            \"created_at\": \"2022-04-23T02:56:19.000000Z\"\n        },\n        {\n            \"uuid\": \"302da71e-f06b-3010-9c60-30d740a3c25d\",\n            \"name\": \"Sabryna Morissette MD\",\n            \"email\": \"gay20@example.net\",\n            \"email_verified_at\": \"2022-04-23T02:56:19.000000Z\",\n            \"updated_at\": \"2022-04-23T02:56:19.000000Z\",\n            \"created_at\": \"2022-04-23T02:56:19.000000Z\"\n        },\n        {\n            \"uuid\": \"2340de66-3804-3e18-bb61-f8a5cae128f8\",\n            \"name\": \"Watson McLaughlin\",\n            \"email\": \"ephraim92@example.com\",\n            \"email_verified_at\": \"2022-04-23T02:56:19.000000Z\",\n            \"updated_at\": \"2022-04-23T02:56:19.000000Z\",\n            \"created_at\": \"2022-04-23T02:56:19.000000Z\"\n        },\n        {\n            \"uuid\": \"74c30495-92f7-319b-8118-437ad7163166\",\n            \"name\": \"Prof. Stephon Cummings Sr.\",\n            \"email\": \"shayna.schuster@example.com\",\n            \"email_verified_at\": \"2022-04-23T02:56:19.000000Z\",\n            \"updated_at\": \"2022-04-23T02:56:19.000000Z\",\n            \"created_at\": \"2022-04-23T02:56:19.000000Z\"\n        },\n        {\n            \"uuid\": \"74729be9-9a67-3443-840e-f45d3f072f37\",\n            \"name\": \"Carlotta Walker\",\n            \"email\": \"wflatley@example.com\",\n            \"email_verified_at\": \"2022-04-23T02:56:19.000000Z\",\n            \"updated_at\": \"2022-04-23T02:56:19.000000Z\",\n            \"created_at\": \"2022-04-23T02:56:19.000000Z\"\n        },\n        {\n            \"uuid\": \"0e2e09a8-fc6e-3170-bb58-3b23be40c2e4\",\n            \"name\": \"Miss Janessa Kohler\",\n            \"email\": \"dorothy42@example.net\",\n            \"email_verified_at\": \"2022-04-23T02:56:19.000000Z\",\n            \"updated_at\": \"2022-04-23T02:56:19.000000Z\",\n            \"created_at\": \"2022-04-23T02:56:19.000000Z\"\n        },\n        {\n            \"uuid\": \"2358ef9e-3271-39c7-a316-baad4636601d\",\n            \"name\": \"Mrs. Josefa Hermann PhD\",\n            \"email\": \"madie39@example.org\",\n            \"email_verified_at\": \"2022-04-23T02:56:19.000000Z\",\n            \"updated_at\": \"2022-04-23T02:56:19.000000Z\",\n            \"created_at\": \"2022-04-23T02:56:19.000000Z\"\n        },\n        {\n            \"uuid\": \"019024a3-491a-4dd4-9732-9d6c51d9e1a1\",\n            \"name\": \"Daniel Okoronkwo\",\n            \"email\": \"daniel@gmail.com\",\n            \"email_verified_at\": null,\n            \"updated_at\": \"2022-04-23T04:07:46.000000Z\",\n            \"created_at\": \"2022-04-23T21:10:57.000000Z\"\n        },\n        {\n            \"uuid\": \"0f7c8af8-02f5-47b4-8270-e53659610f23\",\n            \"name\": \"Miracle Okoronkwo\",\n            \"email\": \"miracle@gmail.com\",\n            \"email_verified_at\": null,\n            \"updated_at\": \"2022-04-23T04:09:35.000000Z\",\n            \"created_at\": \"2022-04-23T04:09:35.000000Z\"\n        },\n        {\n            \"uuid\": \"f418faf8-84f3-4b90-85be-f5e4ba8a1d5a\",\n            \"name\": \"Chinedu Okoronkwo\",\n            \"email\": \"chinedu@gmail.com\",\n            \"email_verified_at\": null,\n            \"updated_at\": \"2022-04-23T04:12:55.000000Z\",\n            \"created_at\": \"2022-04-23T04:12:55.000000Z\"\n        },\n        {\n            \"uuid\": \"eed54d75-4227-457a-bb56-cd42047e0506\",\n            \"name\": \"Chinedu Okoronkwo\",\n            \"email\": \"silly@gmail.com\",\n            \"email_verified_at\": null,\n            \"updated_at\": \"2022-04-23T05:23:17.000000Z\",\n            \"created_at\": \"2022-04-23T05:23:17.000000Z\"\n        },\n        {\n            \"uuid\": \"298268dc-65cf-4498-885e-28c9282b1f85\",\n            \"name\": \"Daniel Okoronkwo\",\n            \"email\": \"daniel1@gmail.com\",\n            \"email_verified_at\": null,\n            \"updated_at\": \"2022-04-23T22:03:23.000000Z\",\n            \"created_at\": \"2022-04-23T22:03:23.000000Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Forgot Password",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"daniel@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/users/forgot-password",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users",
+								"forgot-password"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Forgot Password - Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"daniel@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/users/forgot-password",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"users",
+										"forgot-password"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Apr 2022 22:24:52 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Apr 2022 22:24:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.5"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"status\": \"OK\",\n    \"message\": \"Password reset token sent to your email this token is valid for 1 hour\",\n    \"token\": \"RUCOpN8PjCHCJkMzbXsnWx9khmYMXK77VlGXa9w0IcBkxABiwXbqHb2CcwProqvE\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Reset Password",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"daniel@gmail.com\",\r\n    \"token\": \"RUCOpN8PjCHCJkMzbXsnWx9khmYMXK77VlGXa9w0IcBkxABiwXbqHb2CcwProqvE\",\r\n    \"password\": \"password\",\r\n    \"password_confirmation\": \"password\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/users/reset-password",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users",
+								"reset-password"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Reset Password - Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"daniel@gmail.com\",\r\n    \"token\": \"RUCOpN8PjCHCJkMzbXsnWx9khmYMXK77VlGXa9w0IcBkxABiwXbqHb2CcwProqvE\",\r\n    \"password\": \"password\",\r\n    \"password_confirmation\": \"password\"\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/users/reset-password",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"users",
+										"reset-password"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Apr 2022 22:25:40 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Apr 2022 22:25:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.5"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"code\": 200,\n    \"status\": \"OK\",\n    \"message\": \"Password reset successful\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
