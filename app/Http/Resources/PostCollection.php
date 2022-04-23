@@ -20,11 +20,11 @@ class PostCollection extends ResourceCollection
             "metadata" => [
                 "current_page" => $request->query('page') === null ? 1 : (int) $request->query('page'),
                 "from" => 1,
-                "to" => (round(Post::count() / 10) + 1),
+                "to" => (ceil(Post::where('user_id', auth()->user()->id)->count() / 10)),
                 "current_url" => $request->query('page') === null ? $request->url() : "{$request->url()}?=page{$request->query('page')}",
                 "base_url" => $request->url(),
                 "per_page" => 10,
-                "total" => Post::count()
+                "total" => Post::where('user_id', auth()->user()->id)->count()
             ],         
         ];
     }

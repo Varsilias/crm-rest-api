@@ -11,6 +11,7 @@ use App\Http\Resources\PostCollection;
 
 class PostController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
@@ -23,7 +24,7 @@ class PostController extends Controller
             "error" => false,
             "code" => Response::HTTP_OK, 
             "status" => Response::$statusTexts[Response::HTTP_OK], 
-            "data" => (new PostCollection((Post::with('category')->paginate(10))))
+            "data" => (new PostCollection((Post::where('user_id', auth()->user()->id)->with('category')->paginate(10))))
         ]);
     }
 
@@ -40,8 +41,8 @@ class PostController extends Controller
             "error" => false,
             "code" => Response::HTTP_CREATED, 
             "message" => Response::$statusTexts[Response::HTTP_CREATED], 
-            "data" => new PostResource(Post::create($request->validated()))
-        ])->setStatusCode(Response::HTTP_CREATED);
+            "data" => new PostResource(Post::create(array_merge($request->validated(), ['user_id' =>  auth()->user()->id])))
+        ], Response::HTTP_CREATED);
     }
 
     /**
@@ -52,12 +53,23 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
+        $post = Post::where("id", $post->id)->where("user_id", auth()->user()->id)->first();
+
+        if (!$post) {
+            return response()->json([
+                "error" => true,
+                "code" => Response::HTTP_NOT_FOUND, 
+                "status" => Response::$statusTexts[Response::HTTP_NOT_FOUND],
+                'message' => 'No Post with this ID',
+            ], Response::HTTP_NOT_FOUND);
+        }
         return response()->json([
             "error" => false,
             "code" => Response::HTTP_OK, 
             "message" => Response::$statusTexts[Response::HTTP_OK], 
-            "data" => new PostResource(Post::findOrFail($post->id))
+            "data" => new PostResource($post)
         ]);
+
     }
 
 
@@ -70,6 +82,14 @@ class PostController extends Controller
      */
     public function update(UpdatePostRequest $request, Post $post)
     {
+        if ($post->user_id !== auth()->user()->id) {
+            return response()->json([
+                "error" => true,
+                "code" => Response::HTTP_FORBIDDEN, 
+                "status" => Response::$statusTexts[Response::HTTP_FORBIDDEN],
+                'message' => 'Cannot modify this resource',
+            ], Response::HTTP_FORBIDDEN);
+        }
         return response()->json([
             "error" => false,
             "code" => Response::HTTP_OK,
@@ -86,6 +106,15 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
+        if ($post->user_id !== auth()->user()->id) {
+            return response()->json([
+                "error" => true,
+                "code" => Response::HTTP_FORBIDDEN, 
+                "status" => Response::$statusTexts[Response::HTTP_FORBIDDEN],
+                'message' => 'Cannot modify this resource',
+            ], Response::HTTP_FORBIDDEN);
+        }
+        
         return response()->json([
             "error" => false,
             "code" => Response::HTTP_OK,

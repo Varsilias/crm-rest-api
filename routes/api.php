@@ -33,5 +33,5 @@ Route::group([
 
     });
     Route::apiResource('categories', CategoryController::class);
-    Route::apiResource('posts', PostController::class);
+    Route::apiResource('posts', PostController::class)->middleware(['jwt.verify']);
 });
