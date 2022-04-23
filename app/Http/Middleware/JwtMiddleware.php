@@ -6,8 +6,9 @@ use Closure;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use Tymon\JWTAuth\Facades\JWTAuth;
+use JWTAuth;
 use Tymon\JWTAuth\Http\Middleware\BaseMiddleware;
+use Illuminate\Support\Facades\Log;
 
 class JwtMiddleware extends BaseMiddleware
 {
@@ -22,6 +23,7 @@ class JwtMiddleware extends BaseMiddleware
     {
         try {
             $user = JWTAuth::parseToken()->authenticate();
+            $request->headers->set('user', $user);
         } catch (Exception $e) {
             if ($e instanceof \Tymon\JWTAuth\Exceptions\TokenInvalidException){
                 return response()->json([

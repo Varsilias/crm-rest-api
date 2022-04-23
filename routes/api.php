@@ -26,7 +26,8 @@ Route::group([
 ], function () {
     Route::group(["prefix" => "users"], function() {
         Route::post('/sign-up', [AuthController::class, "signUp"]);
-        Route::post('/login', [AuthController::class, "login"]);
+        Route::post('/login', [AuthController::class, "login"])->middleware(['jwt.verify']);
+        Route::post('/token/refresh', [AuthController::class, "refresh"])->middleware(['refresh']);
     });
     Route::apiResource('categories', CategoryController::class);
     Route::apiResource('posts', PostController::class);
