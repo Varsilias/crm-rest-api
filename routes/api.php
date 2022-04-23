@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +24,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::group([
     "prefix" => "v1"
 ], function () {
-        Route::apiResource('categories', CategoryController::class);
-        Route::apiResource('posts', PostController::class);
+    Route::group(["prefix" => "users"], function() {
+        Route::post('/sign-up', [AuthController::class, "signUp"]);
+        Route::post('/login', [AuthController::class, "login"]);
+    });
+    Route::apiResource('categories', CategoryController::class);
+    Route::apiResource('posts', PostController::class);
 });
