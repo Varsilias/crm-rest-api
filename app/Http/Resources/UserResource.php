@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources;
 
+use App\Http\Resources\PostResource;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class UserResource extends JsonResource
@@ -18,8 +19,10 @@ class UserResource extends JsonResource
             "uuid" => $this->uuid,
             "name" => $this->name,
             "email" => $this->email,
+            "email_verified_at" => $this->email_verified_at,
             "updated_at" => $this->created_at,
             "created_at" => $this->updated_at,
+            "posts" => PostResource::collection($this->whenLoaded('posts'))
         ];
     }
 }

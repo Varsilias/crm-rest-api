@@ -31,21 +31,21 @@ class JwtMiddleware extends BaseMiddleware
                     "code" => Response::HTTP_FORBIDDEN,
                     "status" => Response::$statusTexts[Response::HTTP_FORBIDDEN],
                     'message' => 'Token is Invalid'
-                ]);
+                ], Response::HTTP_FORBIDDEN);
             } else if ($e instanceof \Tymon\JWTAuth\Exceptions\TokenExpiredException){
                 return response()->json([
                     "error" => true,
                     "code" => Response::HTTP_UNAUTHORIZED,
                     "status" => Response::$statusTexts[Response::HTTP_UNAUTHORIZED],
                     'message' => 'Token has Expired'
-                ]);            
+                ], Response::HTTP_UNAUTHORIZED);            
             } else {
                 return response()->json([
                     "error" => true,
                     "code" => Response::HTTP_BAD_REQUEST,
                     "status" => Response::$statusTexts[Response::HTTP_BAD_REQUEST],
                     'message' => 'Token was not provided'
-                ]);            
+                ], Response::HTTP_BAD_REQUEST);            
             }
         }
         return $next($request);

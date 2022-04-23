@@ -103,4 +103,28 @@ class AuthController extends Controller
             "refresh_expiry" => Config::get("jwt.ttl") * 60 * 24
         ], Response::HTTP_OK);
     }
+
+    public function profile(Request $request)
+    {
+        return response()->json([
+            "error" => false,
+            "code" => Response::HTTP_OK, 
+            "status" => Response::$statusTexts[Response::HTTP_OK],
+            "user" => new UserResource(auth()->user()->load(['posts']))
+
+        ], Response::HTTP_OK);
+        
+    }
+
+    public function logout(Request $request)
+    {
+        // auth()->invalidate(true);
+        JWTAuth::invalidate(); // blacklist the access_token
+        auth()->logout();
+        return response()->json([
+            "error" => false,
+            "status" => Response::$statusTexts[Response::HTTP_OK],
+            "message" => "Logged out successfully"
+        ]);
+    }
 }
