@@ -40,7 +40,7 @@ class CategoryController extends Controller
             "code" => Response::HTTP_CREATED, 
             "message" => Response::$statusTexts[Response::HTTP_CREATED], 
             "data" => new CategoryResource(Category::create($request->validated()))
-        ])->setStatusCode(Response::HTTP_CREATED);
+        ],Response::HTTP_CREATED);
     }
 
     /**

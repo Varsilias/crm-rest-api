@@ -9,14 +9,13 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use App\Http\Requests\ResetPasswordRequest;
+use App\Http\Requests\ForgotPasswordRequest;
 
 class ForgotPasswordController extends Controller
 {
-    public function forgotPassword(Request $request)
+    public function forgotPassword(ForgotPasswordRequest $request)
     {
-        $request->validate([
-            'email' => 'required|email|exists:users',
-        ]);
 
         $token = Str::random(64);
         DB::table('password_resets')->insert([
@@ -38,14 +37,8 @@ class ForgotPasswordController extends Controller
         ]);    
     }
 
-    public function resetPassword(Request $request)
+    public function resetPassword(ResetPasswordRequest $request)
     {
-        $request->validate([
-            "token" => "required|string|min:3|max:64",
-            'email' => 'required|email|exists:users',
-            'password' => 'required|string|min:8|confirmed',
-            'password_confirmation' => 'required'
-        ]);
 
         $update = DB::table('password_resets')->where(['email' => $request->email, 'token' => $request->token])->first();
 
@@ -54,7 +47,7 @@ class ForgotPasswordController extends Controller
                 "error" => true,
                 "code" => Response::HTTP_BAD_REQUEST,
                 "status" => Response::$statusTexts[Response::HTTP_BAD_REQUEST],
-                "message" => "Invalid password reset token",
+                "message" => "Invalid email or password reset token",
             ], Response::HTTP_BAD_REQUEST);        }
 
         $user = User::where('email', $request->email)->update(['password' => Hash::make($request->password)]);
