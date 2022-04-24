@@ -5,6 +5,11 @@ namespace App\Http\Resources;
 use App\Http\Resources\PostResource;
 use Illuminate\Http\Resources\Json\JsonResource;
 
+
+/**
+ * @mixin \App\Models\User
+ */
+
 class UserResource extends JsonResource
 {
     /**
